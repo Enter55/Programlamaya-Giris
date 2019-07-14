@@ -1,0 +1,60 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Mantik_Baglaclari
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a;
+            int b;
+            int c;
+
+            Console.WriteLine("Harfler icin sayilar veriniz");
+            Console.Write("a: ");
+            a = int.Parse(Console.ReadLine());
+            Console.Write("b: ");
+            b = int.Parse(Console.ReadLine());
+            Console.Write("c: ");
+            c = int.Parse(Console.ReadLine());
+            Console.WriteLine("--------------------------------");
+            Console.WriteLine("Girdiginiz sayilar");
+            Console.WriteLine("--------------------------------");
+            Console.WriteLine("a: " + a);
+            Console.WriteLine("b: " + b);
+            Console.WriteLine("c: " + c);
+            Console.ReadLine();
+
+            if (a < b && a < c)
+            {
+                Console.WriteLine("a b ve c nin arasin da");
+            }
+            else
+            {
+                Console.WriteLine("a b'nin veya c'nin arasin'da yer almiyor");
+            }
+            if (a == b && a < c)
+            {
+                Console.WriteLine("a b'ye esittir ve c den kucuktur");
+            }
+            else
+            {
+                Console.WriteLine("a b'ye esit degildir ve c den de kucuk degildir ");
+            }
+            if (a > b && a > c)
+            {
+                Console.WriteLine("a be den de buyuk c den de ");
+            }
+            else
+            {
+                Console.WriteLine("a b' den veya c'den buyuk degildir");
+            }
+
+            Console.ReadLine();
+        }
+    }
+}
