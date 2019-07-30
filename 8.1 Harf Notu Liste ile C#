@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Sayilarin_harf_karsiligi
+{
+    class Program
+    {
+     
+        static void Main(string[] args)
+        {
+            int Sayi;
+            int Sayim;
+            char hk;    
+            char hl;
+            Random Rastgele = new Random();
+            do
+            {
+                Console.Write("Lütfen 0 ile 100 arasi bir Sayi giriniz: ");
+                Sayim = int.Parse(Console.ReadLine());
+
+            } while (Sayim >= 100);
+
+                Console.WriteLine("Girdiginiz Sayi:" + Sayim);
+                Sayi = Rastgele.Next(0, Sayim);
+       
+                Console.WriteLine("Secilen sayiniz: " + Sayi);
+                hk = Convert.ToChar(Sayi);
+                Console.WriteLine("Harf Karsiligi: " + hk);
+                Console.ReadLine();
+
+            for (int Sayac1 = 0; Sayac1 < 23; Sayac1++)
+            {
+                 Console.SetCursorPosition(45, 0 + Sayac1);
+                 hl = Convert.ToChar(Sayac1);  
+                Console.WriteLine(Sayac1 + ": " + hl);
+               
+            }
+            Console.ReadLine();
+
+        }
+    }
+}
